@@ -22,11 +22,47 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          width: 100,
-          height: 100,
-          padding: const EdgeInsets.all(8.0),
-          margin: const EdgeInsets.all(8.0),
+      appBar: AppBar(
+        title: Text('Container'),
+        centerTitle: true,
+        backgroundColor: Colors.blue
+      ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+
+            Container(
+              color: Colors.transparent,
+              width: 85,
+              height: 85,
+              padding: EdgeInsets.all(1),
+              margin: EdgeInsets.all(10),
+               child: CircleAvatar(
+                 backgroundColor: Colors.red,
+                 radius: 0.50,
+               ),
+            ),
+            Divider(
+              color: Colors.grey[850],
+              thickness: 0.1,
+            ),
+
+            Container(
+              color: Colors.yellow,
+              width: 100,
+              height: 100,
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(10),
+            ),
+
+            Container(
+              color: Colors.green,
+              width: 100,
+              height: 100,
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(10),
+            ),
+          ],
         ),
     );
   }
